@@ -20,12 +20,10 @@ const testCases = [
 ];
 
 describe('simpleCalculator', () => {
-  describe.each(testCases)(
+  test.each(testCases)(
     'simpleCalculator($a, $b, $action) should return $expected',
     ({ a, b, action, expected }) => {
-      test(`returns ${expected}`, () => {
-        expect(simpleCalculator({ a, b, action })).toBe(expected);
-      });
+      expect(simpleCalculator({ a, b, action })).toBe(expected);
     },
   );
 });
