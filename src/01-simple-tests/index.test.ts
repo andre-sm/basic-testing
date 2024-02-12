@@ -35,5 +35,8 @@ describe('simpleCalculator tests', () => {
     expect(simpleCalculator({ a: null, b: 2, action: Action.Multiply })).toBe(
       null,
     );
+    expect(
+      simpleCalculator({ a: 'null', b: null, action: Action.Multiply }),
+    ).toBe(null);
   });
 });
